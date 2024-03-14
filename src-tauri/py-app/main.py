@@ -1,5 +1,5 @@
 
 
-def main():
+def main(dummy):
     return "Hello, Python"
 
