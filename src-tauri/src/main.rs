@@ -11,8 +11,8 @@ use tauri::Manager;
 
 mod pyhelpers;
 
+// TODO use dotenv
 const PY_VENV_PATH: &str = r#"D:\RustRoot\RustPolars\00_venv\portopt\Lib\site-packages"#;
-
 
 fn main() {
     let app = tauri::Builder::default().setup(|app| {
@@ -24,14 +24,17 @@ fn main() {
         Ok(())
     });
 
-    app.invoke_handler(tauri::generate_handler![serve_string_python,])
-        .run(tauri::generate_context!())
-        .expect("error while running tauri application");
+    app.invoke_handler(tauri::generate_handler![
+        serve_python_string,
+        server_check_interacton,
+    ])
+    .run(tauri::generate_context!())
+    .expect("error while running tauri application");
 }
 
 #[tauri::command(rename_all = "snake_case")]
-fn serve_string_python() -> String {
-    let func_args = (&String::from("None"), );
+fn serve_python_string() -> String {
+    let func_args = (&String::from("None"),);
 
     let pysrc = pyhelpers::pysrc_main();
     let py_res = pyhelpers::pyfunc_runtime(PY_VENV_PATH, pysrc, "main", func_args);
@@ -39,13 +42,18 @@ fn serve_string_python() -> String {
     format!("Hello, Rust and {}", py_res)
 }
 
+#[tauri::command(rename_all = "snake_case")]
+fn server_check_interacton(input_string: String) -> String {
+    dbg!(user_input)
+}
+
 mod test {
-    use crate::serve_string_python;
+    use crate::serve_python_string;
 
     #[test]
     fn test_py_str() {
         assert_eq!(
-            serve_string_python(),
+            serve_python_string(),
             "Hello, Rust and Hello, Python".to_string()
         )
     }

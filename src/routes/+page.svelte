@@ -1,2 +1,16 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+</script>
+
+<div>
+	<h1>Tauri Template Demo</h1>
+	<br />
+</div>
+
+<div>
+	<p>Corresponding demo is routed in nav bar above</p>
+</div>
+
+<div></div>
+
+<style>
+</style>

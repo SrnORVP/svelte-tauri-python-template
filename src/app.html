@@ -1,12 +1,63 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		%sveltekit.head%
-	</head>
-	<body data-sveltekit-preload-data="hover">
-		<div style="display: contents">%sveltekit.body%</div>
-	</body>
+
+<head>
+	<meta charset="utf-8" />
+	<link rel="icon" href="%sveltekit.assets%/favicon.png" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	%sveltekit.head%
+</head>
+
+<body data-sveltekit-preload-data="hover">
+	<div style="display: contents">%sveltekit.body%</div>
+</body>
+
 </html>
+
+<style>
+	html {
+		font-family: sans-serif;
+		background-color: #333;
+	}
+
+	h1 {
+		color: white;
+		/* text-align: center; */
+		margin: 1rem 1rem 0.5rem 1rem;
+	}
+
+	h2 {
+		color: white;
+		margin: 1rem 1rem 0.5rem 1rem;
+	}
+
+	p {
+		color: white;
+		margin: 1rem 1rem 0.5rem 1rem;
+	}
+
+	nav ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		background-color: #333;
+	}
+
+	nav li {
+		float: left;
+	}
+
+	nav li a {
+		display: block;
+		color: white;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+	}
+
+	/* Change the link color to #111 (black) on hover */
+	nav li a:hover {
+		background-color: #111;
+	}
+</style>
