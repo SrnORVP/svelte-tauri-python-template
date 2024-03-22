@@ -1,0 +1,13 @@
+{
+	"name": "tauri-app-template",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"dev": "npm dev --port 8080",
+		"build": "npm build"
+	},
+	"type": "module",
+	"dependencies": {
+		"@tauri-apps/api": "^1.5.3"
+	}
+}
