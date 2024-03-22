@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Welcome from Tauri with PyO3!</h1>
+  <p>Answer is: <span id="answer"></span></p>
+  <form onchange="">
+    <input type="number" name="num1" id="num1" value="0">
+    <input type="number" name="num2" id="num2" value="0">
+  </form>
+  <script>
+    // access the pre-bundled global API functions
+    const { invoke } = window.__TAURI__.tauri
+
+    window.addEventListener("change", callPy)
+
+    function callPy() {
+      const num1Value = document.getElementById('num1').value;
+      const num2Value = document.getElementById('num2').value;
+
+      console.log([num1Value, num2Value])
+
+      invoke('add_numbers', { num1: parseInt(num1Value), num2: parseInt(num2Value) })
+        .then((response) => {
+          window.answer.innerHTML = response
+        })
+    }
+
+
+  </script>
+</body>
+
+</html>
