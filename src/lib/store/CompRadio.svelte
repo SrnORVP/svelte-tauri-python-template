@@ -1,7 +1,7 @@
 <script>
 	import { radioToggle } from './store';
 
-	let allOps = ['Both', 'Workout', 'Health'];
+	let allOps = ['Option1', 'Option2', 'Option3'];
 	$: ops = allOps[0];
 	$: radioToggle.init(ops);
 </script>

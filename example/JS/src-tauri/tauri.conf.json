@@ -7,7 +7,7 @@
     "withGlobalTauri": true
   },
   "package": {
-    "productName": "tauri-app-template",
+    "productName": "tauri-app-js-example",
     "version": "0.1.0"
   },
   "tauri": {
@@ -58,7 +58,7 @@
         "fullscreen": false,
         "height": 600,
         "resizable": true,
-        "title": "Tauri App Template",
+        "title":  "tauri-app-js-example",
         "width": 800
       }
     ]

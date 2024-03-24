@@ -1,11 +1,11 @@
 [package]
-name = "Tauri_App_Template"
+name = "Tauri_App_JS_Example"
 version = "0.1.0"
 description = "A Tauri App"
 authors = ["you"]
 license = ""
 repository = ""
-default-run =  "Tauri_App_Template"
+default-run =   "Tauri_App_JS_Example"
 edition = "2021"
 rust-version = "1.60"
 
