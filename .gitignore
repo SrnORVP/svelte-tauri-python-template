@@ -7,11 +7,11 @@ pnpm-lock.yaml
 package-lock.json
 
 # Python
-/.pytest_cache
-/__pycache__
+**/.pytest_cache
+**/__pycache__
 
 # Rust
-/target
+**/target
 
 # Dev
 .env
@@ -21,8 +21,9 @@ package-lock.json
 # Tools
 /.vscode
 .eslintrc.cjs
+.eslintignore
 .prettierrc
-.*ignore
+.prettierignore
 .*rc*
 
 # Custom
